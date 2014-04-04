@@ -7,8 +7,39 @@
 //
 
 #import "AppDelegate.h"
+#import "MainViewController.h"
 
 @implementation AppDelegate
+
+//@synthesize window;
+//@synthesize root;
+//@synthesize navController;
+
+- (void)applicationDidFinishLaunching {
+    
+//    MainViewController *main = [[MainViewController alloc] init];
+//    
+//    
+//    self.navigationController = [[[UINavigationController alloc] initWithRootView:main] autorelease];
+    
+//
+//    // Create the first View Controller (for the navigation controller)
+//    root = [[MainViewController alloc] initWithNibName:
+//                           @"MainViewController" bundle: nil];
+//    
+//    root.title = @"Film Finder";
+//    
+//    // Create the Navigation Controller (using this View Controller)
+//    self.navController = [[UINavigationController alloc]
+//                          initWithRootViewController:root ];
+//    
+//    [MainViewController alloc] initwithni
+//    
+//    
+//    // Add the navigation controller’s view to the window
+//    self.window.rootViewController = self.navController;
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

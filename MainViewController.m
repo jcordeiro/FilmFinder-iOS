@@ -6,18 +6,28 @@
 //  Copyright (c) 2014 Jonathan Cordeiro. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MainViewController.h"
 
-@interface ViewController ()
+@interface MainViewController ()
 
 @end
 
-@implementation ViewController
+@implementation MainViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    // Create the Blue View...
+//    self.rootViewController = [[BIDBlueViewController alloc]
+//                               initWithNibName:@"BlueView" bundle:nil];
+//    
+//    // and insert it into the view!
+//    [self.view insertSubview:self.blueViewController.view atIndex:0];
+//    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
