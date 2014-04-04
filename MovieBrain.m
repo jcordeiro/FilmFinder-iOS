@@ -20,7 +20,9 @@
     
     // Load the file content and read the data into arrays
     genreDict = [[NSDictionary alloc] initWithContentsOfFile:path];
-    genres = [genreDict allKeys];
+//    genres = [genreDict allKeys];
+    genres = [[genreDict allKeys] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+    
     genreCodes = [genreDict allValues];
  
 }

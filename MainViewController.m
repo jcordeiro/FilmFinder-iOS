@@ -36,7 +36,8 @@
     
     [[self brain] fillBrain];
     
-    genrePicker.dataSource = self;
+    // Have the picker start a few rows in so the values are centered
+    [genrePicker selectRow:3 inComponent:0 animated:YES];
     
     // Create the Blue View...
 //    self.rootViewController = [[BIDBlueViewController alloc]
@@ -68,39 +69,16 @@ numberOfRowsInComponent: (NSInteger) component {
     return 1;
 }
 
-////END
-
-
 -(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row   forComponent:(NSInteger)component
 {
  return (NSString*) [[brain genres] objectAtIndex: row];
 }
 
+// Runs when picker item is selected
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row   inComponent:(NSInteger)component
 {
     NSLog(@"You selected %@", [[[self brain] genres] objectAtIndex:row]);
 }
-
-
-//- (NSString *)pickerView:(UIPickerView *)pickerView
-//             titleForRow:(NSInteger)row
-//            forComponent:(NSInteger)component {
-//    return (NSString*) [[brain genres] objectAtIndex: row];
-//}
-
-//- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent: (NSInteger)component
-//{
-//    return 6;
-//    
-//}
-
-
-
-
-//- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
-//{
-//    return 1;
-//    
-//}
+//END
 
 @end
