@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Action</key>
+	<integer>28</integer>
+	<key>Adventure</key>
+	<integer>12</integer>
+	<key>Animation</key>
+	<integer>16</integer>
+	<key>Comedy</key>
+	<integer>35</integer>
+	<key>Crime</key>
+	<integer>80</integer>
+	<key>Documentary</key>
+	<integer>99</integer>
+	<key>Drama</key>
+	<integer>18</integer>
+	<key>Family</key>
+	<integer>10751</integer>
+	<key>Fantasy</key>
+	<integer>14</integer>
+	<key>Foreign</key>
+	<integer>10769</integer>
+	<key>History</key>
+	<integer>36</integer>
+	<key>Horror</key>
+	<integer>27</integer>
+	<key>Indie</key>
+	<integer>10756</integer>
+	<key>Music</key>
+	<integer>10402</integer>
+	<key>Mystery</key>
+	<integer>9648</integer>
+	<key>Romance</key>
+	<integer>10749</integer>
+	<key>Science Fiction</key>
+	<integer>878</integer>
+	<key>Thriller</key>
+	<integer>53</integer>
+	<key>War</key>
+	<integer>10752</integer>
+	<key>Western</key>
+	<integer>37</integer>
+</dict>
+</plist>

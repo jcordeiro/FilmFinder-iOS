@@ -14,10 +14,29 @@
 
 @implementation MainViewController
 
+@synthesize genrePicker;
+
+- (MovieBrain *)brain
+{
+    if (!brain) // ensure that brain doesn't already exist
+    {
+        // Allocate and initialize the QuizBrain
+        brain = [[MovieBrain alloc] init];
+        
+        // Fill the brain's team genres from the plist
+//        [brain fillBrain];
+    }
+    return brain;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    [[self brain] fillBrain];
+    
+    genrePicker.dataSource = self;
     
     // Create the Blue View...
 //    self.rootViewController = [[BIDBlueViewController alloc]
@@ -35,5 +54,53 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+//START
+
+// returns the # of rows in each component..
+-(NSInteger) pickerView: (UIPickerView*) pickerView
+numberOfRowsInComponent: (NSInteger) component {
+    return [[brain genres] count];
+}
+
+// returns the number of 'columns' to display.
+- (NSInteger) numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    return 1;
+}
+
+////END
+
+
+-(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row   forComponent:(NSInteger)component
+{
+ return (NSString*) [[brain genres] objectAtIndex: row];
+}
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row   inComponent:(NSInteger)component
+{
+    NSLog(@"You selected %@", [[[self brain] genres] objectAtIndex:row]);
+}
+
+
+//- (NSString *)pickerView:(UIPickerView *)pickerView
+//             titleForRow:(NSInteger)row
+//            forComponent:(NSInteger)component {
+//    return (NSString*) [[brain genres] objectAtIndex: row];
+//}
+
+//- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent: (NSInteger)component
+//{
+//    return 6;
+//    
+//}
+
+
+
+
+//- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+//{
+//    return 1;
+//    
+//}
 
 @end

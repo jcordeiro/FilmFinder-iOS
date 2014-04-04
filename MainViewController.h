@@ -7,8 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MovieBrain.h"
 
-@interface MainViewController : UIViewController
+@interface MainViewController : UIViewController <UIPickerViewDataSource,UIPickerViewDelegate>
+{
+    IBOutlet UIButton *chooseGenreButton;
+    IBOutlet UIButton *randomGenreButton;
+    IBOutlet UIButton *viewFavouritesButton;
+
+    MovieBrain *brain;
+}
+
+@property (nonatomic, strong) IBOutlet UIPickerView *genrePicker;
 
 
 //@property (strong, nonatomic) MovieViewController *movieViewController;
