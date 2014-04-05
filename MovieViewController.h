@@ -11,7 +11,7 @@
 
 @interface MovieViewController : UIViewController
 {    
-    
+    IBOutlet UIScrollView *scroller;
 }
 
 @end

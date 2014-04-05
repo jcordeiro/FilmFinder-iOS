@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MovieBrain.h"
+#import "Movie.h"
 
 @interface MainViewController : UIViewController <UIPickerViewDataSource,UIPickerViewDelegate>
 {
@@ -16,6 +17,7 @@
     IBOutlet UIButton *viewFavouritesButton;
 
     MovieBrain *brain;
+    Movie *movie;
 }
 
 @property (nonatomic, strong) IBOutlet UIPickerView *genrePicker;

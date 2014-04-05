@@ -15,5 +15,6 @@
 @property (nonatomic, strong) NSArray *genreCodes;
 
 -(void)fillBrain;
+- (int)getGenreCode:(NSString *)genre;
 
 @end

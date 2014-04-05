@@ -27,4 +27,11 @@
  
 }
 
+// Takes the name of a genre and returns the int genreCode associated with it
+// that's needed for use with themoviedb.org's API
+- (int)getGenreCode:(NSString *)genre
+{
+    return [[genreDict objectForKey:genre] intValue];
+}
+
 @end

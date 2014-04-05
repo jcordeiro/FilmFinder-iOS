@@ -39,6 +39,11 @@
     // Have the picker start a few rows in so the values are centered
     [genrePicker selectRow:3 inComponent:0 animated:YES];
     
+    movie = [[Movie alloc] init];
+    
+    [movie getMovieDetails];
+    
+    
     // Create the Blue View...
 //    self.rootViewController = [[BIDBlueViewController alloc]
 //                               initWithNibName:@"BlueView" bundle:nil];
