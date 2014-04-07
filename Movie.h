@@ -15,6 +15,7 @@
 
 extern NSString * const API_KEY;
 extern NSString * const API_BASE_URL;
+extern NSString * const POSTER_BASE_PATH;
 
 
 @property (nonatomic, copy) NSString *backdropPath;
@@ -32,6 +33,10 @@ extern NSString * const API_BASE_URL;
 
 
 - (Movie *)getMovieDetails;
+
+- (Movie *)getRandomMovies:(int) genreCode;
+
+- (NSMutableArray *)parseJSONMovies:(int) nbrOfPages forGenre:(int) genreCode;
 
 
 @end
