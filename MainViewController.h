@@ -17,10 +17,23 @@
     IBOutlet UIButton *viewFavouritesButton;
 
     MovieBrain *brain;
-    Movie *movie;
 }
 
+extern NSString * const CHOSEN_GENRE_SEGUE;
+extern NSString * const RANDOM_GENRE_SEGUE;
+
 @property (nonatomic, strong) IBOutlet UIPickerView *genrePicker;
+
+// - (Movie *)fetchRandomMovie;
+
+- (IBAction)chooseByGenrePressed:(id)sender;
+- (IBAction)chooseByRandomGenrePressed:(id)sender;
+- (IBAction)viewFavouritesPressed:(id)sender;
+
+-(void)performsegueNotification:(NSNotification *) notif;
+
+
+
 
 
 //@property (strong, nonatomic) MovieViewController *movieViewController;

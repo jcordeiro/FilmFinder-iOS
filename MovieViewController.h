@@ -8,10 +8,21 @@
 
 #import <UIKit/UIKit.h>
 #import "MovieBrain.h"
+#import "Movie.h"
 
 @interface MovieViewController : UIViewController
 {    
     IBOutlet UIScrollView *scroller;
+    
+    IBOutlet UILabel *movieTitle;
+    IBOutlet UIImageView *poster;
+    IBOutlet UILabel *releaseDate;
+    IBOutlet UILabel *runningTime;
+    IBOutlet UILabel *imdbScore;
+    IBOutlet UIButton *viewTrailerButton;
+    IBOutlet UILabel *overview;
 }
+
+@property (nonatomic, strong) Movie *movie;
 
 @end

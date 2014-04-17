@@ -13,9 +13,9 @@
     NSMutableData *_responseData;
 }
 
-extern NSString * const API_KEY;
-extern NSString * const API_BASE_URL;
-extern NSString * const POSTER_BASE_PATH;
+//extern NSString * const API_KEY;
+//extern NSString * const API_BASE_URL;
+//extern NSString * const POSTER_BASE_PATH;
 
 
 @property (nonatomic, copy) NSString *backdropPath;
@@ -24,6 +24,7 @@ extern NSString * const POSTER_BASE_PATH;
 @property (nonatomic, copy) NSString *releaseDate;
 @property (nonatomic, copy) NSString *posterPath;
 @property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) UIImage *poster;
 @property (nonatomic, assign) double voteAverage;
 @property (nonatomic, assign) int voteCount;
 @property (nonatomic, copy) NSString *imdbID;
@@ -32,12 +33,12 @@ extern NSString * const POSTER_BASE_PATH;
 @property (nonatomic, assign) int runtime;
 
 
-- (Movie *)getMovieDetails;
-
-- (Movie *)getRandomMovies:(int) genreCode;
-
-- (NSMutableArray *)parseJSONMovies:(int) nbrOfPages forGenre:(int) genreCode;
-
+//- (int)getNbrOfResultPages;
+//- (void)sendRequestForNbrOfPages:(int) genreCode;
+//- (void)sendRequestForRandomPage:(int)totalPages forGenre:(int)genreCode;
+//- (Movie *)getRandomMovie;
+//- (void) sendRequestForMoreMovieDetails:(Movie *)movie;
+//- (Movie *)addExtraMovieDetailsToMovie:(Movie *)movie;
 
 @end
 

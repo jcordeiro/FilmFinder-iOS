@@ -14,6 +14,8 @@
 
 @implementation MovieViewController
 
+@synthesize movie;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -26,9 +28,28 @@
 - (void)viewDidLoad
 {
     [scroller setScrollEnabled:YES];
-    [scroller setContentSize:CGSizeMake(320, 900)];
+  //  [scroller setContentSize:CGSizeMake(320, 900)];
+    
+  [movieTitle setText:[movie title]];
+    
+   //  [movieTitle setText:@"The Social Network"];
+    
+      NSLog(@"mvc movie: %@", movie);
+    
+    // FIX SCROLL VIEW HEIGHT HERE!
+    
+//    CGRect contentRect = CGRectZero;
+//    for (UIView *view in scroller.subviews) {
+//        contentRect = CGRectUnion(contentRect, view.frame);
+//    }
+//    scroller.contentSize = contentRect.size;
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+  
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
